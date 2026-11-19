@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Innovation Day Luxembourg – Demo Guide</title>
+<script src="https://assets.meshmesh.io/system/tailwindcss-browser-4.js"></script>
+<style type="text/tailwindcss">
+@theme {
+  --color-primary: #0176D3; --color-primary-hover: #066AFE; --color-navy: #001E5B; --color-electric: #066AFE; --color-cloud: #00B3FF;
+  --color-page: #EEF5FD; --color-surface: #FFFFFF; --color-ink: #181818; --color-muted: #5C5C5C; --color-line: #E5E5E5;
+  --color-success: #06A59A; --color-warning: #DA9F01; --color-danger: #B60554;
+}
+@media print { .noprint { display:none } .card,.q { break-inside: avoid; box-shadow:none; border:1px solid #ddd } }
+</style>
+</head>
+<body class="bg-page text-ink text-base">
+<header class="bg-linear-135 from-navy via-[#022AC0] to-electric text-white">
+  <div class="max-w-[1100px] mx-auto px-6 pt-10 pb-20 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+    <div>
+      <p class="text-sm uppercase tracking-wider opacity-80">Innovation Day Luxembourg 2026</p>
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight mt-2">Agentforce Coworker</h1>
+    </div>
+    <div class="noprint">
+      <a href="#questions" class="inline-flex items-center gap-2 bg-white text-navy hover:bg-page font-semibold text-sm rounded-xl px-5 py-3 shadow-sm transition-colors">
+        <span>Jump to 15 Questions</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-[1100px] mx-auto px-6 pb-16">
+
+  <!-- Org Logins Section (Participant Users Only) -->
+  <section id="logins" class="mt-10">
+    <h2 class="text-2xl font-semibold tracking-tight text-navy">Org logins</h2>
+    <div class="mt-4 bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-6 flex flex-col md:flex-row md:items-center gap-4">
+      <div class="flex-1">
+        <p class="text-sm text-muted">Password for all 60 participant users — shared separately by your facilitator</p>
+      </div>
+    </div>
+    <div id="grid" class="mt-6 grid gap-6 md:grid-cols-2"></div>
+  </section>
+
+  <!-- 15 Questions Section -->
+  <section id="questions" class="mt-14 scroll-mt-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+      <div>
+        <h2 class="text-2xl font-semibold tracking-tight text-navy">15 questions to ask the coworker</h2>
+        <p class="text-[15px] text-muted mt-1">Click <span class="font-semibold text-ink">Ask</span> in the search bar and paste a question. Under each one is what the data shows, so you know what a good answer looks like.</p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button data-f="" class="chip noprint text-sm rounded-full px-3 py-1.5 border border-primary text-primary cursor-pointer">All</button>
+        <button data-f="Accounts" class="chip noprint text-sm rounded-full px-3 py-1.5 border border-line hover:border-primary cursor-pointer">Accounts</button>
+        <button data-f="Pipeline" class="chip noprint text-sm rounded-full px-3 py-1.5 border border-line hover:border-primary cursor-pointer">Pipeline</button>
+        <button data-f="Service" class="chip noprint text-sm rounded-full px-3 py-1.5 border border-line hover:border-primary cursor-pointer">Service</button>
+        <button data-f="Marketing" class="chip noprint text-sm rounded-full px-3 py-1.5 border border-line hover:border-primary cursor-pointer">Marketing</button>
+        <button data-f="Generate" class="chip noprint text-sm rounded-full px-3 py-1.5 border border-line hover:border-primary cursor-pointer">Generate</button>
+      </div>
+    </div>
+    <ol class="mt-6 grid gap-4">
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Accounts">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">1</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Which are our 5 largest accounts by annual revenue?</p>
+          <button data-copy="Which are our 5 largest accounts by annual revenue?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Accounts</span>Assurity Corporation (Financial Services, London) leads, followed by Momentum Design and General Utilities.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Accounts">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">2</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Give me an overview of Assurity Corporation.</p>
+          <button data-copy="Give me an overview of Assurity Corporation." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Accounts</span>Industry, location, revenue, key contacts and related opportunities in one answer.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Accounts">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">3</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Which of our accounts are in Healthcare &amp; Life Sciences?</p>
+          <button data-copy="Which of our accounts are in Healthcare &amp; Life Sciences?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Accounts</span>Includes Wellspring, Inc. and Silodyne Company.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">4</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">What is the total value of our open pipeline, broken down by stage?</p>
+          <button data-copy="What is the total value of our open pipeline, broken down by stage?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>Roughly $3.3M in Qualification, $2.6M in Proposal/Quote and $2.0M in Negotiation.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">5</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">What are the 5 biggest open opportunities?</p>
+          <button data-copy="What are the 5 biggest open opportunities?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>Datanet, Inc. – Additional Products ($511.5K, Negotiation) is the largest, then Wellspring, Inc. – New Business ($250K).</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">6</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Which open opportunities have a close date that is already in the past?</p>
+          <button data-copy="Which open opportunities have a close date that is already in the past?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>A good data-quality demo: several open deals, such as Wellspring, Inc. – New Business, still have 2024 close dates.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">7</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Summarize the Datanet, Inc. – Additional Products opportunity and suggest next steps.</p>
+          <button data-copy="Summarize the Datanet, Inc. – Additional Products opportunity and suggest next steps." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>Stage, amount, close date and owner, plus recommended actions.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">8</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">How many opportunities did we win versus lose?</p>
+          <button data-copy="How many opportunities did we win versus lose?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>361 Closed Won versus 22 Closed Lost.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">9</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Which sales rep owns the largest open pipeline?</p>
+          <button data-copy="Which sales rep owns the largest open pipeline?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>Reps such as Cindy Central, Paul Partner, Ely East and Bill South appear in the ranking.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Service">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">10</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Show me all new high-priority cases.</p>
+          <button data-copy="Show me all new high-priority cases." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Service</span>8 new High cases, including billing questions and a failing high-capacity battery.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Service">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">11</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Which customers reported problems with the high capacity battery?</p>
+          <button data-copy="Which customers reported problems with the high capacity battery?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Service</span>Green Fields Media and Omega, Inc.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Service">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">12</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Give me a 360° view of Omega, Inc.: open cases and opportunities.</p>
+          <button data-copy="Give me a 360° view of Omega, Inc.: open cases and opportunities." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Service</span>A billing case, a battery case and a $128K New Business opportunity in Discovery.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Marketing">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">13</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Where do most of our open leads come from?</p>
+          <button data-copy="Where do most of our open leads come from?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Marketing</span>Website (149) and Social Media (88) are the top lead sources.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Marketing">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">14</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Which campaigns generated the most opportunities?</p>
+          <button data-copy="Which campaigns generated the most opportunities?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Marketing</span>Web-to-Lead Campaign, Referral Program Launch and Industry Tradeshow, with 7 each.</p>
+      </div>
+    </li>
+    <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Generate">
+      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">15</span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-start justify-between gap-3">
+          <p class="text-[17px] font-semibold text-navy">Draft a follow-up email to Wellspring, Inc. about their $250K proposal.</p>
+          <button data-copy="Draft a follow-up email to Wellspring, Inc. about their $250K proposal." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+        </div>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Generate</span>Shows the coworker writing content grounded in the CRM record, not just retrieving data.</p>
+      </div>
+    </li>
+    </ol>
+  </section>
+
+  
+</main>
+
+<script>
+const orgs = [
+  {"n": "01", "url": "https://trailsignup-89302f9c947cf3.my.salesforce.com", "users": ["innovationdayuser_1@idlux-org01.demo", "innovationdayuser_2@idlux-org01.demo", "innovationdayuser_3@idlux-org01.demo", "innovationdayuser_4@idlux-org01.demo"]},
+  {"n": "02", "url": "https://trailsignup-7b32c3f2f39e0a.my.salesforce.com", "admin": "trailsignup.7b32c3f2f39e0a@salesforce.com", "users": ["innovationdayuser_1@idlux-org02.demo", "innovationdayuser_2@idlux-org02.demo", "innovationdayuser_3@idlux-org02.demo", "innovationdayuser_4@idlux-org02.demo"]},
+  {"n": "03", "url": "https://trailsignup-6e9320f1f59000.my.salesforce.com", "admin": "trailsignup.6e9320f1f59000@salesforce.com", "users": ["innovationdayuser_1@idlux-org03.demo", "innovationdayuser_2@idlux-org03.demo", "innovationdayuser_3@idlux-org03.demo", "innovationdayuser_4@idlux-org03.demo"]},
+  {"n": "04", "url": "https://trailsignup-1f0222d2ec66d0.my.salesforce.com", "admin": "trailsignup.1f0222d2ec66d0@salesforce.com", "users": ["innovationdayuser_1@idlux-org04.demo", "innovationdayuser_2@idlux-org04.demo", "innovationdayuser_3@idlux-org04.demo", "innovationdayuser_4@idlux-org04.demo"]},
+  {"n": "05", "url": "https://trailsignup-d455ebc8d448e0.my.salesforce.com", "admin": "trailsignup.d455ebc8d448e0@salesforce.com", "users": ["innovationdayuser_1@idlux-org05.demo", "innovationdayuser_2@idlux-org05.demo", "innovationdayuser_3@idlux-org05.demo", "innovationdayuser_4@idlux-org05.demo"]},
+  {"n": "06", "url": "https://trailsignup-fda86d34ce6763.my.salesforce.com", "admin": "trailsignup.fda86d34ce6763@salesforce.com", "users": ["innovationdayuser_1@idlux-org06.demo", "innovationdayuser_2@idlux-org06.demo", "innovationdayuser_3@idlux-org06.demo", "innovationdayuser_4@idlux-org06.demo"]},
+  {"n": "07", "url": "https://trailsignup-4f5dcec97ceec9.my.salesforce.com", "admin": "trailsignup.4f5dcec97ceec9@salesforce.com", "users": ["innovationdayuser_1@idlux-org07.demo", "innovationdayuser_2@idlux-org07.demo", "innovationdayuser_3@idlux-org07.demo", "innovationdayuser_4@idlux-org07.demo"]},
+  {"n": "08", "url": "https://trailsignup-ab1c888c9e59ce.my.salesforce.com", "admin": "trailsignup.ab1c888c9e59ce@salesforce.com", "users": ["innovationdayuser_1@idlux-org08.demo", "innovationdayuser_2@idlux-org08.demo", "innovationdayuser_3@idlux-org08.demo", "innovationdayuser_4@idlux-org08.demo"]},
+  {"n": "09", "url": "https://trailsignup-533777ec2d04fa.my.salesforce.com", "admin": "trailsignup.533777ec2d04fa@salesforce.com", "users": ["innovationdayuser_1@idlux-org09.demo", "innovationdayuser_2@idlux-org09.demo", "innovationdayuser_3@idlux-org09.demo", "innovationdayuser_4@idlux-org09.demo"]},
+  {"n": "10", "url": "https://trailsignup-ed7ae571801b14.my.salesforce.com", "admin": "trailsignup.ed7ae571801b14@salesforce.com", "users": ["innovationdayuser_1@idlux-org10.demo", "innovationdayuser_2@idlux-org10.demo", "innovationdayuser_3@idlux-org10.demo", "innovationdayuser_4@idlux-org10.demo"]},
+  {"n": "11", "url": "https://trailsignup-7606dd0ceee7e6.my.salesforce.com", "admin": "trailsignup.7606dd0ceee7e6@salesforce.com", "users": ["innovationdayuser_1@idlux-org11.demo", "innovationdayuser_2@idlux-org11.demo", "innovationdayuser_3@idlux-org11.demo", "innovationdayuser_4@idlux-org11.demo"]},
+  {"n": "12", "url": "https://trailsignup-c8adb8b6ad1e7c.my.salesforce.com", "admin": "trailsignup.c8adb8b6ad1e7c@salesforce.com", "users": ["innovationdayuser_1@idlux-org12.demo", "innovationdayuser_2@idlux-org12.demo", "innovationdayuser_3@idlux-org12.demo", "innovationdayuser_4@idlux-org12.demo"]},
+  {"n": "13", "url": "https://trailsignup-81e314d09ea997.my.salesforce.com", "admin": "trailsignup.81e314d09ea997@salesforce.com", "users": ["innovationdayuser_1@idlux-org13.demo", "innovationdayuser_2@idlux-org13.demo", "innovationdayuser_3@idlux-org13.demo", "innovationdayuser_4@idlux-org13.demo"]},
+  {"n": "14", "url": "https://trailsignup-1bbbabc43cb87e.my.salesforce.com", "admin": "trailsignup.1bbbabc43cb87e@salesforce.com", "users": ["innovationdayuser_1@idlux-org14.demo", "innovationdayuser_2@idlux-org14.demo", "innovationdayuser_3@idlux-org14.demo", "innovationdayuser_4@idlux-org14.demo"]},
+  {"n": "15", "url": "https://trailsignup-f21cf62b1b282a.my.salesforce.com", "admin": "trailsignup.f21cf62b1b282a@salesforce.com", "users": ["innovationdayuser_1@idlux-org15.demo", "innovationdayuser_2@idlux-org15.demo", "innovationdayuser_3@idlux-org15.demo", "innovationdayuser_4@idlux-org15.demo"]}
+];
+
+
+const row = (role, user, badge) => `
+  <div class="flex items-center gap-3 py-2.5 border-t border-line first:border-t-0">
+    <span class="shrink-0 text-xs font-semibold rounded-full px-2 py-0.5 ${badge}">${role}</span>
+    <code class="flex-1 min-w-0 truncate text-[15px]" title="${user}">${user}</code>
+    <button data-copy="${user}" class="copy noprint text-xs text-primary hover:underline cursor-pointer">Copy</button>
+  </div>`;
+
+function render(filter = "") {
+  const f = filter.trim().toLowerCase();
+  document.getElementById('grid').innerHTML = orgs
+    .filter(o => !f || ("org " + o.n + " " + o.users.join(" ") + " " + o.url).toLowerCase().includes(f))
+    .map(o => `
+      <article class="card bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-6">
+        <div class="flex items-start justify-between gap-3">
+          <div>
+            <p class="text-sm text-muted">Innovation Day org</p>
+            <h3 class="text-2xl font-semibold tracking-tight text-navy">Org ${o.n}</h3>
+          </div>
+          <a href="${o.url}" target="_blank" class="noprint text-sm bg-primary hover:bg-primary-hover text-white rounded-lg px-3 py-1.5">Open org</a>
+        </div>
+        <a href="${o.url}" target="_blank" class="mt-2 block text-[15px] text-primary hover:underline break-all">${o.url.replace('https://', '')}</a>
+        <div class="mt-4">
+          ${o.users.map((u, i) => row('User ' + (i + 1), u, 'bg-primary/10 text-primary')).join('')}
+        </div>
+      </article>
+    `).join('') || '<p class="text-muted">No org matches that search.</p>';
+}
+
+function renderAdmins() {
+  const adminOrgs = orgs.filter(o => Boolean(o.admin));
+  document.getElementById('admin-grid').innerHTML = adminOrgs.map(o => `
+    <div class="flex items-center gap-3 py-2.5 border-b border-line">
+      <span class="shrink-0 text-xs font-semibold rounded-full px-2.5 py-0.5 bg-navy/10 text-navy">Org ${o.n} Admin</span>
+      <code class="flex-1 min-w-0 truncate text-[14px] text-ink" title="${o.admin}">${o.admin}</code>
+      <button data-copy="${o.admin}" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
+    </div>
+  `).join('');
+}
+
+render();
+renderAdmins();
+
+// Safely bind search input if present
+document.getElementById('q')?.addEventListener('input', e => render(e.target.value));
+
+// Category filter chips
+document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
+  document.querySelectorAll('.chip').forEach(x => x.classList.remove('border-primary', 'text-primary'));
+  c.classList.add('border-primary', 'text-primary');
+  document.querySelectorAll('.q').forEach(q => q.style.display = (!c.dataset.f || q.dataset.cat === c.dataset.f) ? '' : 'none');
+}));
+
+// Copy to clipboard with fallback for iframe environments
+document.addEventListener('click', e => {
+  const b = e.target.closest('.copy');
+  if (!b) return;
+  const textToCopy = b.dataset.copy;
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(textToCopy).catch(() => fallbackCopy(textToCopy));
+  } else {
+    fallbackCopy(textToCopy);
+  }
+  const t = b.textContent;
+  b.textContent = 'Copied';
+  setTimeout(() => b.textContent = t, 1200);
+});
+
+function fallbackCopy(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try {
+    document.execCommand('copy');
+  } catch (err) {
+    console.error('Copy failed', err);
+  }
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
