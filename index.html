@@ -290,35 +290,45 @@ document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () =
   document.querySelectorAll('.q').forEach(q => q.style.display = (!c.dataset.f || q.dataset.cat === c.dataset.f) ? '' : 'none');
 }));
 
-// Copy to clipboard with fallback for iframe environments
-document.addEventListener('click', e => {
-  const b = e.target.closest('.copy');
-  if (!b) return;
-  const textToCopy = b.dataset.copy;
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(textToCopy).catch(() => fallbackCopy(textToCopy));
-  } else {
-    fallbackCopy(textToCopy);
-  }
-  const t = b.textContent;
-  b.textContent = 'Copied';
-  setTimeout(() => b.textContent = t, 1200);
-});
-
+// Copy to clipboard with fallback for iframe / non-secure environments
 function fallbackCopy(text) {
   const ta = document.createElement('textarea');
   ta.value = text;
-  ta.style.position = 'fixed';
-  ta.style.opacity = '0';
+  ta.setAttribute('readonly', '');
+  ta.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;';
   document.body.appendChild(ta);
+  ta.focus();
   ta.select();
-  try {
-    document.execCommand('copy');
-  } catch (err) {
-    console.error('Copy failed', err);
-  }
+  ta.setSelectionRange(0, text.length);
+  let ok = false;
+  try { ok = document.execCommand('copy'); } catch (err) { console.error('Copy failed', err); }
   document.body.removeChild(ta);
+  return ok;
 }
+
+async function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try { await navigator.clipboard.writeText(text); return true; } catch (err) { /* fall through */ }
+  }
+  return fallbackCopy(text);
+}
+
+document.addEventListener('click', async e => {
+  const b = e.target.closest('.copy');
+  if (!b || b.dataset.busy) return;
+  b.dataset.busy = '1';
+  const original = b.dataset.label || (b.dataset.label = b.textContent);
+  const ok = await copyText(b.dataset.copy);
+  b.textContent = ok ? 'Copied' : 'Press Ctrl/Cmd+C';
+  if (!ok) {
+    const code = b.previousElementSibling;
+    if (code && code.tagName === 'CODE') {
+      const r = document.createRange(); r.selectNodeContents(code);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    }
+  }
+  setTimeout(() => { b.textContent = original; delete b.dataset.busy; }, 1500);
+});
 </script>
 </body>
 </html>
