@@ -11,6 +11,19 @@
   --color-page: #EEF5FD; --color-surface: #FFFFFF; --color-ink: #181818; --color-muted: #5C5C5C; --color-line: #E5E5E5;
   --color-success: #06A59A; --color-warning: #DA9F01; --color-danger: #B60554;
 }
+.q[data-cat="Accounts"], .chip[data-f="Accounts"] { --cat: #0176D3; }
+.q[data-cat="Pipeline"], .chip[data-f="Pipeline"] { --cat: #06A59A; }
+.q[data-cat="Service"], .chip[data-f="Service"] { --cat: #B60554; }
+.q[data-cat="Marketing"], .chip[data-f="Marketing"] { --cat: #DA9F01; }
+.q[data-cat="Generate"], .chip[data-f="Generate"] { --cat: #7F56D9; }
+.q[data-cat="Skills"], .chip[data-f="Skills"] { --cat: #EA580C; }
+.q[data-cat="Quick pages"], .chip[data-f="Quick pages"] { --cat: #0E7490; }
+.q { border-left: 4px solid var(--cat, #0176D3); }
+.q .cat-num { background: color-mix(in srgb, var(--cat) 14%, white); color: var(--cat); }
+.q .cat-badge { background: color-mix(in srgb, var(--cat) 14%, white); color: var(--cat); }
+.chip[data-f]:not([data-f=""]) { border-color: color-mix(in srgb, var(--cat) 45%, white); color: var(--cat); }
+.chip[data-f]:not([data-f=""]):hover { background: color-mix(in srgb, var(--cat) 10%, white); }
+.chip.active { background: var(--cat, #0176D3); color: white !important; border-color: var(--cat, #0176D3) !important; }
 @media print { .noprint { display:none } .card,.q { break-inside: avoid; box-shadow:none; border:1px solid #ddd } }
 </style>
 </head>
@@ -53,7 +66,7 @@
         <p class="text-[15px] text-muted mt-1">Click <span class="font-semibold text-ink">Ask</span> in the search bar and paste a question. Under each one is what the data shows, so you know what a good answer looks like.</p>
       </div>
       <div class="flex flex-wrap gap-2">
-        <button data-f="" class="chip noprint text-sm rounded-full px-3 py-1.5 border border-primary text-primary cursor-pointer">All</button>
+        <button data-f="" class="chip active noprint text-sm rounded-full px-3 py-1.5 border cursor-pointer">All</button>
         <button data-f="Accounts" class="chip noprint text-sm rounded-full px-3 py-1.5 border border-line hover:border-primary cursor-pointer">Accounts</button>
         <button data-f="Pipeline" class="chip noprint text-sm rounded-full px-3 py-1.5 border border-line hover:border-primary cursor-pointer">Pipeline</button>
         <button data-f="Service" class="chip noprint text-sm rounded-full px-3 py-1.5 border border-line hover:border-primary cursor-pointer">Service</button>
@@ -65,223 +78,223 @@
     </div>
     <ol class="mt-6 grid gap-4">
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Accounts">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">1</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">1</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Which are our 5 largest accounts by annual revenue?</p>
           <button data-copy="Which are our 5 largest accounts by annual revenue?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Accounts</span>Assurity Corporation (Financial Services, London) leads, followed by Momentum Design and General Utilities.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Accounts</span>Assurity Corporation (Financial Services, London) leads, followed by Momentum Design and General Utilities.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Accounts">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">2</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">2</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Give me an overview of Assurity Corporation.</p>
           <button data-copy="Give me an overview of Assurity Corporation." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Accounts</span>Industry, location, revenue, key contacts and related opportunities in one answer.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Accounts</span>Industry, location, revenue, key contacts and related opportunities in one answer.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Accounts">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">3</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">3</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Which of our accounts are in Healthcare &amp; Life Sciences?</p>
           <button data-copy="Which of our accounts are in Healthcare &amp; Life Sciences?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Accounts</span>Includes Wellspring, Inc. and Silodyne Company.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Accounts</span>Includes Wellspring, Inc. and Silodyne Company.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">4</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">4</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">What is the total value of our open pipeline, broken down by stage?</p>
           <button data-copy="What is the total value of our open pipeline, broken down by stage?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>Roughly $3.3M in Qualification, $2.6M in Proposal/Quote and $2.0M in Negotiation.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Pipeline</span>Roughly $3.3M in Qualification, $2.6M in Proposal/Quote and $2.0M in Negotiation.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">5</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">5</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">What are the 5 biggest open opportunities?</p>
           <button data-copy="What are the 5 biggest open opportunities?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>Datanet, Inc. – Additional Products ($511.5K, Negotiation) is the largest, then Wellspring, Inc. – New Business ($250K).</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Pipeline</span>Datanet, Inc. – Additional Products ($511.5K, Negotiation) is the largest, then Wellspring, Inc. – New Business ($250K).</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">6</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">6</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Which open opportunities have a close date that is already in the past?</p>
           <button data-copy="Which open opportunities have a close date that is already in the past?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>A good data-quality demo: several open deals, such as Wellspring, Inc. – New Business, still have 2024 close dates.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Pipeline</span>A good data-quality demo: several open deals, such as Wellspring, Inc. – New Business, still have 2024 close dates.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">7</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">7</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Summarize the Datanet, Inc. – Additional Products opportunity and suggest next steps.</p>
           <button data-copy="Summarize the Datanet, Inc. – Additional Products opportunity and suggest next steps." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>Stage, amount, close date and owner, plus recommended actions.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Pipeline</span>Stage, amount, close date and owner, plus recommended actions.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">8</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">8</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">How many opportunities did we win versus lose?</p>
           <button data-copy="How many opportunities did we win versus lose?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>361 Closed Won versus 22 Closed Lost.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Pipeline</span>361 Closed Won versus 22 Closed Lost.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Pipeline">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">9</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">9</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Which sales rep owns the largest open pipeline?</p>
           <button data-copy="Which sales rep owns the largest open pipeline?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Pipeline</span>Reps such as Cindy Central, Paul Partner, Ely East and Bill South appear in the ranking.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Pipeline</span>Reps such as Cindy Central, Paul Partner, Ely East and Bill South appear in the ranking.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Service">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">10</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">10</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Show me all new high-priority cases.</p>
           <button data-copy="Show me all new high-priority cases." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Service</span>8 new High cases, including billing questions and a failing high-capacity battery.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Service</span>8 new High cases, including billing questions and a failing high-capacity battery.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Service">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">11</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">11</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Which customers reported problems with the high capacity battery?</p>
           <button data-copy="Which customers reported problems with the high capacity battery?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Service</span>Green Fields Media and Omega, Inc.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Service</span>Green Fields Media and Omega, Inc.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Service">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">12</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">12</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Give me a 360° view of Omega, Inc.: open cases and opportunities.</p>
           <button data-copy="Give me a 360° view of Omega, Inc.: open cases and opportunities." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Service</span>A billing case, a battery case and a $128K New Business opportunity in Discovery.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Service</span>A billing case, a battery case and a $128K New Business opportunity in Discovery.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Marketing">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">13</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">13</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Where do most of our open leads come from?</p>
           <button data-copy="Where do most of our open leads come from?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Marketing</span>Website (149) and Social Media (88) are the top lead sources.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Marketing</span>Website (149) and Social Media (88) are the top lead sources.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Marketing">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">14</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">14</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Which campaigns generated the most opportunities?</p>
           <button data-copy="Which campaigns generated the most opportunities?" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Marketing</span>Web-to-Lead Campaign, Referral Program Launch and Industry Tradeshow, with 7 each.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Marketing</span>Web-to-Lead Campaign, Referral Program Launch and Industry Tradeshow, with 7 each.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Generate">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">15</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">15</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Draft a follow-up email to Wellspring, Inc. about their $250K proposal.</p>
           <button data-copy="Draft a follow-up email to Wellspring, Inc. about their $250K proposal." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Generate</span>Shows the coworker writing content grounded in the CRM record, not just retrieving data.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Generate</span>Shows the coworker writing content grounded in the CRM record, not just retrieving data.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Skills">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">16</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">16</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Summarize my open opportunities closing this quarter and draft a follow-up email for the one most at risk.</p>
           <button data-copy="Summarize my open opportunities closing this quarter and draft a follow-up email for the one most at risk." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Skills</span>Shows a coworker skill chaining a pipeline summary with a drafted email.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Skills</span>Shows a coworker skill chaining a pipeline summary with a drafted email.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Skills">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">17</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">17</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Prepare me for my 2pm customer meeting. Pull the account history, open cases, and recent Slack conversations.</p>
           <button data-copy="Prepare me for my 2pm customer meeting. Pull the account history, open cases, and recent Slack conversations." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Skills</span>Shows a coworker skill combining CRM records with Slack context into one meeting brief.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Skills</span>Shows a coworker skill combining CRM records with Slack context into one meeting brief.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Skills">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">18</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">18</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Log my call notes against the Acme opportunity and update the next steps.</p>
           <button data-copy="Log my call notes against the Acme opportunity and update the next steps." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Skills</span>Shows a coworker skill writing back to the CRM, not just reading from it.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Skills</span>Shows a coworker skill writing back to the CRM, not just reading from it.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Quick pages">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">19</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">19</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Show me a quick page for Acme with open cases, pipeline, and upcoming renewals.</p>
           <button data-copy="Show me a quick page for Acme with open cases, pipeline, and upcoming renewals." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Quick pages</span>Generates a single-account quick page that combines service and sales data.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Quick pages</span>Generates a single-account quick page that combines service and sales data.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Quick pages">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">20</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">20</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Build a quick page for my Monday pipeline review: top 10 deals, stalled deals, and deals with no next step.</p>
           <button data-copy="Build a quick page for my Monday pipeline review: top 10 deals, stalled deals, and deals with no next step." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Quick pages</span>Generates a pipeline review page you can use as a weekly cockpit.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Quick pages</span>Generates a pipeline review page you can use as a weekly cockpit.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Quick pages">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">21</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">21</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Create a quick page for today&#x27;s service escalations, sorted by SLA risk.</p>
           <button data-copy="Create a quick page for today&#x27;s service escalations, sorted by SLA risk." class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Quick pages</span>Generates a live service escalation page prioritized by SLA risk.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Quick pages</span>Generates a live service escalation page prioritized by SLA risk.</p>
       </div>
     </li>
     <li class="q bg-surface rounded-2xl shadow-[0_4px_20px_rgba(0,30,91,0.08)] p-5 flex gap-4" data-cat="Quick pages">
-      <span class="shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary font-semibold flex items-center justify-center">22</span>
+      <span class="shrink-0 w-9 h-9 rounded-full cat-num font-semibold flex items-center justify-center">22</span>
       <div class="flex-1 min-w-0">
         <div class="flex items-start justify-between gap-3">
           <p class="text-[17px] font-semibold text-navy">Can you create a report of all opportunities that are relevant for me, include critical information and do that in a quick page</p>
           <button data-copy="Can you create a report of all opportunities that are relevant for me, include critical information and do that in a quick page" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
         </div>
-        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 bg-navy/10 text-navy mr-2">Quick pages</span>Generates a personal opportunity report as a quick page, with the key fields included.</p>
+        <p class="mt-1.5 text-[15px] text-muted"><span class="text-xs font-semibold uppercase tracking-wide rounded-full px-2 py-0.5 cat-badge mr-2">Quick pages</span>Generates a personal opportunity report as a quick page, with the key fields included.</p>
       </div>
     </li>
     </ol>
@@ -344,8 +357,8 @@ document.getElementById('q')?.addEventListener('input', e => render(e.target.val
 
 // Category filter chips
 document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
-  document.querySelectorAll('.chip').forEach(x => x.classList.remove('border-primary', 'text-primary'));
-  c.classList.add('border-primary', 'text-primary');
+  document.querySelectorAll('.chip').forEach(x => x.classList.remove('active'));
+  c.classList.add('active');
   document.querySelectorAll('.q').forEach(q => q.style.display = (!c.dataset.f || q.dataset.cat === c.dataset.f) ? '' : 'none');
 }));
 
