@@ -314,7 +314,6 @@ const row = (role, user, badge) => `
   <div class="flex items-center gap-3 py-2.5 border-t border-line first:border-t-0">
     <span class="shrink-0 text-xs font-semibold rounded-full px-2 py-0.5 ${badge}">${role}</span>
     <code class="flex-1 min-w-0 truncate text-[15px]" title="${user}">${user}</code>
-    <button data-copy="${user}" class="copy noprint text-xs text-primary hover:underline cursor-pointer">Copy</button>
   </div>`;
 
 function render(filter = "") {
@@ -338,19 +337,7 @@ function render(filter = "") {
     `).join('') || '<p class="text-muted">No org matches that search.</p>';
 }
 
-function renderAdmins() {
-  const adminOrgs = orgs.filter(o => Boolean(o.admin));
-  document.getElementById('admin-grid').innerHTML = adminOrgs.map(o => `
-    <div class="flex items-center gap-3 py-2.5 border-b border-line">
-      <span class="shrink-0 text-xs font-semibold rounded-full px-2.5 py-0.5 bg-navy/10 text-navy">Org ${o.n} Admin</span>
-      <code class="flex-1 min-w-0 truncate text-[14px] text-ink" title="${o.admin}">${o.admin}</code>
-      <button data-copy="${o.admin}" class="copy noprint shrink-0 text-xs text-primary hover:underline cursor-pointer">Copy</button>
-    </div>
-  `).join('');
-}
-
 render();
-renderAdmins();
 
 // Safely bind search input if present
 document.getElementById('q')?.addEventListener('input', e => render(e.target.value));
